@@ -26,6 +26,7 @@ public class DesignTacoController {
         List<Ingredient> ingredients = Arrays.asList(
                 new Ingredient("FLTO", "Flour Tortilla", Type.WRAP),
                 new Ingredient("COTO", "Corn Tortilla", Type.WRAP),
+                new Ingredient("BNTO", "Banana Tortilla", Type.WRAP),
                 new Ingredient("GRBF", "Ground Beef", Type.PROTEIN),
                 new Ingredient("CARN", "Carnitas", Type.PROTEIN),
                 new Ingredient("TMTO", "Diced Tomatoes", Type.VEGGIES),
@@ -50,6 +51,11 @@ public class DesignTacoController {
 
     private Iterable<Ingredient> filterByType(
             List<Ingredient> ingredients, Type type) {
+        System.out.println(ingredients
+                .stream()
+                .filter(x -> x.getType().equals(type))
+                .collect(Collectors.toList()));
+        System.out.println("**************************");
         return ingredients
                 .stream()
                 .filter(x -> x.getType().equals(type))
