@@ -51,11 +51,7 @@ public class DesignTacoController {
 
     private Iterable<Ingredient> filterByType(
             List<Ingredient> ingredients, Type type) {
-        System.out.println(ingredients
-                .stream()
-                .filter(x -> x.getType().equals(type))
-                .collect(Collectors.toList()));
-        System.out.println("**************************");
+
         return ingredients
                 .stream()
                 .filter(x -> x.getType().equals(type))
