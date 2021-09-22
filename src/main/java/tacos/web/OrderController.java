@@ -21,9 +21,10 @@ public class OrderController {
         model.addAttribute("tacoOrder", new TacoOrder());
         return "orderForm";
     }
+
     @PostMapping
-    public String processOrder(@Valid TacoOrder order, Errors errors){
-        if (errors.hasErrors()){
+    public String processOrder(@Valid TacoOrder order, Errors errors) {
+        if (errors.hasErrors()) {
             return "orderFrom";
         }
 
