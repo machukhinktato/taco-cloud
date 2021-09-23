@@ -25,7 +25,7 @@ public class OrderController {
     @PostMapping
     public String processOrder(@Valid TacoOrder order, Errors errors) {
         if (errors.hasErrors()) {
-            return "orderFrom";
+            return "orderForm";
         }
 
         log.info("Order submitted: " + order);
