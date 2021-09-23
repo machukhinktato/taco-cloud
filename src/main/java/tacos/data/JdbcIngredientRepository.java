@@ -4,6 +4,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import tacos.Ingredient;
 
+import java.lang.annotation.Annotation;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
@@ -53,4 +54,5 @@ public class JdbcIngredientRepository implements IngredientRepository {
 
         return ingredient;
     }
+
 }
